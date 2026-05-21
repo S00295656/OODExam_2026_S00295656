@@ -8,7 +8,7 @@ namespace OODExam_2026_S00295656
 {
     public class TrainingSession
     {
-        public int SessionId { get; set; }
+        public int TrainingSessionId { get; set; }
         public DateTime SessionDate { get; set; }
         public string SessionType { get; set; }
         public int DurationMinutes { get; set; }
@@ -17,5 +17,10 @@ namespace OODExam_2026_S00295656
         //reference to Member who "owns" the training session
         public int MemberId { get; set; }
         public virtual Member Member { get; set; }
+
+        public override string ToString()
+        {
+            return $"";
+        }
     }
 }

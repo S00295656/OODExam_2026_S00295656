@@ -5,20 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using OODExam_2026_S00295656.Database;
+using OODExam_2026_S00295656;
 
 namespace OODExam_2026_S00295656
 {
-    public class CreateDb
+    public static class CreateDb
     {
-        public CreateDb()
+        public static void DbCreate()
         {
             ClubData db = new ClubData();
 
-            //creating a database if one doesn't already exists, avoids duplication
             using (db)
             {
                 db.Database.CreateIfNotExists();
-
                 // -- Members creation -- \\
                 Member member1 = new Member
                 {
@@ -50,8 +49,12 @@ namespace OODExam_2026_S00295656
                 // -- Members add to database -- \\
 
                 db.Members.Add(member1);
+
                 db.Members.Add(member2);
+
                 db.Members.Add(member3);
+                // -- Save database -- \\
+                db.SaveChanges();
 
                 // -- Sessions creation -- \\
 

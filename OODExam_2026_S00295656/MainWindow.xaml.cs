@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using OODExam_2026_S00295656.Database;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,11 +17,24 @@ namespace OODExam_2026_S00295656
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ClubData _db;
         public MainWindow()
         {
             InitializeComponent();
+            _db = new ClubData();
+
+            CreateDb.DbCreate();
+            LoadMembers();
+        }
+        private void LoadMembers()
+        {
+            var members = _db.Members
+                              .OrderBy(p => p.Surname)
+                              .ThenBy(p => p.FirstName)
+                              .ToList();
+
+            MembersListBox.ItemsSource = members;
         }
 
-        
     }
 }
