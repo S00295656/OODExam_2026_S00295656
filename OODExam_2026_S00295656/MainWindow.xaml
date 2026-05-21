@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="199*"/>
+            <RowDefinition Height="235*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="193*"/>
+            <ColumnDefinition Width="607*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="MembersListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,44,0,0" Grid.RowSpan="2"/>
+        <Label Content="Members" HorizontalAlignment="Left" Height="30" Margin="0,9,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Grid.Column="1" Content="Member Details" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" VerticalAlignment="Top" Width="159"/>
+        <Label Grid.Column="1" Content="Training Sessions" HorizontalAlignment="Left" Height="30" Margin="11,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="158"/>
+        <Button Grid.Column="1" Content="Add Session" HorizontalAlignment="Left" Height="30" Margin="138,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="SessionsListBox" Grid.Column="1" HorizontalAlignment="Left" Height="180" Margin="11,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="496" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label Grid.Column="1" Content="ID :" HorizontalAlignment="Left" Height="50" Margin="11,47,0,0" VerticalAlignment="Top" Width="46"/>
+        <Label Grid.Column="1" Content="Contact Number :" HorizontalAlignment="Left" Height="56" Margin="11,108,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label Grid.Column="1" Content="First Name :" HorizontalAlignment="Left" Height="63" Margin="240,47,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label Grid.Column="1" Content="Membership Type :" HorizontalAlignment="Center" Height="54" Margin="0,110,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label Grid.Column="1" Content="Last Name :" HorizontalAlignment="Left" Height="56" Margin="431,47,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label Grid.Column="1" Content="DOB :" HorizontalAlignment="Left" Height="54" Margin="431,110,0,0" VerticalAlignment="Top" Width="51"/>
+        <TextBlock x:Name="IDtxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="34,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"/>
+        <TextBlock x:Name="FirstNametxtBox" HorizontalAlignment="Left" Height="25" Margin="315,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Grid.Column="1"/>
+        <TextBlock x:Name="LastNametxtBox" HorizontalAlignment="Left" Height="25" Margin="507,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Grid.Column="1"/>
+        <TextBlock x:Name="NumbertxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="118,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="TypetxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="348,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
+        <TextBlock x:Name="DOBtxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="15" Margin="469,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
 
     </Grid>
 </Window>

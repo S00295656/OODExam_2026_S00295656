@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace OODExam_2026_S00295656
 {
-    internal class TrainingSession
+    public class TrainingSession
     {
         public int SessionId { get; set; }
-        public DateTime Sessiondate { get; set; }
+        public DateTime SessionDate { get; set; }
         public string SessionType { get; set; }
         public int DurationMinutes { get; set; }
         public string CoachNotes { get; set; }
+
+        //reference to Member who "owns" the training session
+        public int MemberId { get; set; }
+        public virtual Member Member { get; set; }
     }
 }
