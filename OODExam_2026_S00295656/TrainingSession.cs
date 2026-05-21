@@ -8,7 +8,7 @@ namespace OODExam_2026_S00295656
 {
     public class TrainingSession
     {
-        public int TrainingSessionId { get; set; }
+        public int SessionId { get; set; }
         public DateTime SessionDate { get; set; }
         public string SessionType { get; set; }
         public int DurationMinutes { get; set; }
